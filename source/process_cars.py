@@ -1,4 +1,4 @@
-from pydantic import BaseModel, conlist, ValidationError
+from pydantic import BaseModel, conlist, ValidationError, Field
 from strictyaml import YAML, load,YAMLError
 # import strictyaml as sy
 from typing import Optional
@@ -10,7 +10,7 @@ class CarData(BaseModel):
     length: float
     width: float
     height: float
-    fuel_efficiency: conlist(float, min_length=3, max_length=3)
+    fuel_efficiency: list[float] = Field(min_length=3, max_length=3)
 
 class CarsData(BaseModel):
     listCar : list[CarData]
