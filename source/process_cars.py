@@ -10,7 +10,7 @@ class CarData(BaseModel):
     length: float
     width: float
     height: float
-    fuel_efficiency: list[float]
+    fuel_efficiency: conlist(float, min_length=3, max_length=3)
 
 class CarsData(BaseModel):
     listCar : list[CarData]
