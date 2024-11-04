@@ -6,6 +6,7 @@
   - 12  # City
   - 15  # Highway
   - 13  # Combined
+  - 33
 
 - model: SUV
   length: 4.8
