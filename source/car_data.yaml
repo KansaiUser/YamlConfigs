@@ -1,6 +1,6 @@
 - model: Sedan
   length: 4.5
-  width: 1.8
+  width: "one point eight"
   height: 1.4
   fuel_efficiency:
   - 12  # City
