@@ -1,4 +1,8 @@
-from car_data import car_data
+import yaml
+
+def load_car_data(filename="car_data.yaml"):
+    with open(filename, "r") as file:
+        return yaml.safe_load(file)
 
 def calculate_volume(length, width, height):
     return length * width * height
@@ -7,6 +11,7 @@ def calculate_average_fuel_efficiency(fuel_efficiency):
     return sum(fuel_efficiency) / len(fuel_efficiency)
 
 def main():
+    car_data = load_car_data()
     total_volume = 0
     for car in car_data:
         model = car["model"]
